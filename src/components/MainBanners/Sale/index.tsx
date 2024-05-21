@@ -51,7 +51,7 @@ export default function BannerSale() {
         </div>
         {/* карточка баннера */}
         
-          <Link to={`/category/${obj.name}`} onClick={() => dispatch(setSelectedProducts(obj))} className="absolute cursor-pointer right-[20px] top-[20px] w-[160px] rounded-[6px] border-[1px] border-[#333232]">
+          <Link to={`/category/${obj.name}`} onClick={() => dispatch(setSelectedProducts(obj))} className="absolute z-[999] cursor-pointer right-[20px] top-[20px] w-[160px] rounded-[6px] border-[1px] border-[#333232]">
             <img
               width={160}
               height={140}

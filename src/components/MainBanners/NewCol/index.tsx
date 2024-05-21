@@ -23,7 +23,7 @@ export default function BannerNewCol() {
           <h3 className='font-Floripa w-[50px] text-[22px]'>NEW</h3>
         </div>
         {/* карточка баннера */}
-        <Link to={`/category/${obj.name}`} onClick={() => dispatch(setSelectedProducts(obj))} className="absolute cursor-pointer right-[20px] top-[20px] w-[160px] rounded-[6px] border-[1px] border-[#333232]">
+        <Link to={`/category/${obj.name}`} onClick={() => dispatch(setSelectedProducts(obj))} className="absolute cursor-pointer z-[999] right-[20px] top-[20px] w-[160px] rounded-[6px] border-[1px] border-[#333232]">
           <img
             width={160}
             height={140}
