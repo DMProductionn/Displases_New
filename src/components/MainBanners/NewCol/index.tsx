@@ -15,7 +15,7 @@ export default function BannerNewCol() {
           <img
             width={160}
             height={140}
-            src="/public/img/Clothes/Longsleeves/Longsleeve-black-front.webp"
+            src="/img/Clothes/Longsleeves/Longsleeve-black-front.webp"
             alt=""
           />
           <div className="p-[15px] pt-[6px]">

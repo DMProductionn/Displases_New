@@ -46,7 +46,7 @@ export default function BannerSale() {
             <img
               width={160}
               height={140}
-              src="/public/img/Clothes/Hoodies/Hoodie-gray-front.webp"
+              src="/img/Clothes/Hoodies/Hoodie-gray-front.webp"
               alt=""
             />
             <div className="p-[15px] pt-[6px]">
