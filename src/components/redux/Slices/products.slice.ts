@@ -21,24 +21,24 @@ const initialState: IProducts = {
       id: 1,
       name: 'Displases Hoodie SHTRIH in Gray',
       price: 12000,
-      image: '/img/Clothes/Hoodies/Hoodie-black-back.webp',
-      imgFront: '/img/Clothes/Hoodies/Hoodie-black-front.webp',
+      image: '/public/img/Clothes/Hoodies/Hoodie-black-back.webp',
+      imgFront: '/public/img/Clothes/Hoodies/Hoodie-black-front.webp',
       category: 'Худи'
     },
     {
       id: 2,
       name: 'Displases Hoodie SHTRIH in Gray',
       price: 15500,
-      image: '/img/Clothes/Longsleeves/Longsleeve-black-front.webp',
-      imgFront: '/img/Clothes/Longsleeves/Longsleeve-black-front.webp',
+      image: '/public/img/Clothes/Longsleeves/Longsleeve-black-front.webp',
+      imgFront: '/public/img/Clothes/Longsleeves/Longsleeve-black-front.webp',
       category: 'Лонгсливы'
     },
     {
       id: 3,
       name: 'Displases Hoodie SHTRIH in Gray',
       price: 20500,
-      image: '/img/Clothes/Hoodies/Hoodie-beige-back.webp',
-      imgFront: '/img/Clothes/Hoodies/Hoodie-beige-front.webp',
+      image: '/public/img/Clothes/Hoodies/Hoodie-beige-back.webp',
+      imgFront: '/public/img/Clothes/Hoodies/Hoodie-beige-front.webp',
       category: 'Худи'
     }
   ],

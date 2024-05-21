@@ -4,6 +4,9 @@ import '../../pages/Category/Category.css'
 
 const Product: React.FC<TypeProductProps> = ({ imgFront, name, price}) => {
  
+  const modifiedImagePath = imgFront.replace("/public", "");
+
+  
 
   return (
     <div className="cursor-pointer rounded-[6px] justify-center items-center border-[1px] border-[#333232] p-[15px] w-full max-w-[350px] duration-[500ms]  hover:bg-[#333232]">
@@ -11,7 +14,7 @@ const Product: React.FC<TypeProductProps> = ({ imgFront, name, price}) => {
       <div className="h-[100px] div__img">
         <img
         className="mb-[12px] h-[170px] mx-auto product__img"
-        src={imgFront}
+        src={modifiedImagePath}
         alt="Товар"
       />
       </div>

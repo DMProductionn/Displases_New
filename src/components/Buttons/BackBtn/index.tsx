@@ -24,7 +24,7 @@ export default function BackBtn() {
           className={`relative h-[40px] uppercase text-[12px] bg-gray-light rounded-[6px] flex items-center justify-center w-[103px] pt-[12px] pb-[10px]`}>
           <img
             className={`arrowBack mr-[4px]`}
-            src="/public/img/icons/chevron-right-white.svg"
+            src="/img/icons/chevron-right-white.svg"
             alt="arrow"
           />
           BACK

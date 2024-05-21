@@ -1,11 +1,4 @@
-/* .main {
-  position: relative;
-  max-width: 350px;
-  width: 100%;
-  height: 275px;
-  background-color: #333;
-  border-radius: 6px;
-} */
+
 
 .main {
   position: relative;
@@ -20,14 +13,12 @@
 }
 
 .img {
-  position: absolute;
+  display: flex;
   height: 150px;
   width: 170px;
   background: linear-gradient(90deg, #4C4C4C 0%, #404040 50%, #4C4C4C 100%);
   background-size: 200% 100%;
   animation: skeleton-animation 1s infinite;
-  top: 20px;
-  left: 75px;
   border-radius: 6px;
 }
 
