@@ -1,8 +1,20 @@
 import React from 'react';
 import style from './MainBannerNewCol.module.css';
+import { useDispatch } from 'react-redux';
+import { setSelectedProducts } from '../../redux/Slices/products.slice';
+import { Link } from 'react-router-dom';
 
 export default function BannerNewCol() {
+  const dispatch = useDispatch()
 
+  const obj = {
+    id: 1,
+    name: 'Displases Hoodie SHTRIH in Gray',
+    price: 15500,
+    image: '/public/img/Clothes/Longsleeves/Longsleeve-black-back.webp',
+    imgFront: '/public/img/Clothes/Longsleeves/Longsleeve-black-front.webp',
+    category: 'Лонгсливы'
+  }
 
   return (
     <>
@@ -11,7 +23,7 @@ export default function BannerNewCol() {
           <h3 className='font-Floripa w-[50px] text-[22px]'>NEW</h3>
         </div>
         {/* карточка баннера */}
-        <div className="absolute right-[20px] top-[20px] w-[160px] rounded-[6px] border-[1px] border-[#333232]">
+        <Link to={`/category/${obj.name}`} onClick={() => dispatch(setSelectedProducts(obj))} className="absolute cursor-pointer right-[20px] top-[20px] w-[160px] rounded-[6px] border-[1px] border-[#333232]">
           <img
             width={160}
             height={140}
@@ -21,11 +33,11 @@ export default function BannerNewCol() {
           <div className="p-[15px] pt-[6px]">
             <p className="text-[10px]">DISPLASES Hoodie SHTRIH in Gray</p>
             <div className="flex mt-[8px] gap-[5px]">
-              <p className="text-[10px]">12 300р</p>
-              <p className="text-[#717171] line-through text-[10px]">15 500р</p>
+              <p className="text-[10px]">15 500р</p>
+              <p className="text-[#717171] line-through text-[10px]">18 500р</p>
             </div>
           </div>
-        </div>
+        </Link>
         <img
           width={350}
           className="absolute right-0 bottom-0 rounded-[12px]"

@@ -29,7 +29,7 @@ const initialState: IProducts = {
       id: 2,
       name: 'Displases Hoodie SHTRIH in Gray',
       price: 15500,
-      image: '/public/img/Clothes/Longsleeves/Longsleeve-black-front.webp',
+      image: '/public/img/Clothes/Longsleeves/Longsleeve-black-back.webp',
       imgFront: '/public/img/Clothes/Longsleeves/Longsleeve-black-front.webp',
       category: 'Лонгсливы'
     },

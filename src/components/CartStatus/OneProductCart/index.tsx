@@ -15,7 +15,10 @@ const OneProductCart: React.FC = () => {
   const deleteAllItem = () => {
     dispatch(setCart([]))
   }
-  
+  // @ts-ignore
+  const modifiedImagePathFront = cart?.[0]?.selectedProduct?.imgFront.replace("/public", "");
+  // @ts-ignore
+  const modifiedImagePath = cart?.[0].selectedProduct?.image.replace("/public", "");
 
 
   return (
@@ -38,7 +41,7 @@ const OneProductCart: React.FC = () => {
           <img
             className="p-[20px]"
             // @ts-ignore
-            src={cart.length !== 0 && cart?.[0]?.selectedProduct?.imgFront}
+            src={cart.length !== 0 && modifiedImagePathFront}
             alt="hoodie"
           />
         </div>
@@ -48,7 +51,7 @@ const OneProductCart: React.FC = () => {
             <img
               className={`${style.hoodieSmall} h-[200px]`}
               // @ts-ignore
-              src={cart.length !== 0 && cart?.[0].selectedProduct?.image}
+              src={cart.length !== 0 && modifiedImagePath}
               alt="hoodie"
             />
           </div>
@@ -57,7 +60,7 @@ const OneProductCart: React.FC = () => {
             <img
               className={`${style.hoodieSmall} ${style.hoodieSmall} h-[200px]`}
               // @ts-ignore
-              src={cart.length !== 0 && cart?.[0].selectedProduct?.image}
+              src={cart.length !== 0 && modifiedImagePath}
               alt="hoodie"
             />
           </div>

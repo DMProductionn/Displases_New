@@ -97,7 +97,8 @@ export default function ViewProduct() {
     }
   }, [window.innerWidth, isMobile]);
 
-  console.log(isMobile);
+  const modifiedImagePathFront = selectedProduct?.imgFront.replace("/public", "");
+  const modifiedImagePath = selectedProduct?.image.replace("/public", "");
   
 
   return (
@@ -115,7 +116,7 @@ export default function ViewProduct() {
                 <div className="border-[1px] border-gray-light max-w-[535px] w-full mb-[12px] rounded-[6px]">
                   <img
                     className="p-[20px]"
-                    src={selectedProduct?.imgFront}
+                    src={modifiedImagePathFront}
                     alt="hoodie"
                   />
                 </div>
@@ -123,14 +124,14 @@ export default function ViewProduct() {
                   <div className="border-[1px] border-gray-light max-w-[263px] w-full rounded-[6px]">
                     <img
                       className="p-[20px]"
-                      src={selectedProduct?.image}
+                      src={modifiedImagePath}
                       alt="hoodie"
                     />
                   </div>
                   <div className="border-[1px] border-gray-light max-w-[263px] w-full rounded-[6px]">
                     <img
                       className="p-[20px]"
-                      src={selectedProduct?.image}
+                      src={modifiedImagePath}
                       alt="hoodie"
                     />
                   </div>

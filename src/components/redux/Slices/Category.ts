@@ -10,6 +10,7 @@ const initialState: ICategory = {
   selectCategory: '',
   skeleton: true,
   product_name: '',
+  burger: false
 }
 
 export const Category = createSlice({
@@ -31,11 +32,14 @@ export const Category = createSlice({
     setProductName(state, action: PayloadAction<string>) {
       state.product_name = action.payload;
     },
+    setBurger: (state, action: PayloadAction<boolean>) => {
+      state.burger = action.payload
+    }
   },
 })
 
 
-export const { setProductName, getColorCategoryBtn, selectedCategory, removeColorCategoryBtn, setSkeleton } = Category.actions;
+export const { setProductName, getColorCategoryBtn, selectedCategory, removeColorCategoryBtn, setSkeleton, setBurger } = Category.actions;
 
 
 export default Category.reducer

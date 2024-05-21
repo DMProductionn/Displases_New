@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
-import { removeColorCategoryBtn } from '../../redux/Slices/Category';
+import { removeColorCategoryBtn, setBurger } from '../../redux/Slices/Category';
 import { useDispatch, useSelector } from 'react-redux';
 import CategoryBurger from '../../Buttons/Category/CategoryBurger';
 import { TypeRootStore } from '../../redux/store';
@@ -10,7 +10,9 @@ import { TypeRootStore } from '../../redux/store';
 export default function Header() {
   const dispatch = useDispatch();
   const [total, setTotal] = useState(0);
+  
   const { cart, total_quantity } = useSelector((state: TypeRootStore) => state.Cart)
+  const { burger } = useSelector((state: TypeRootStore) => state.Category)
   
 
   const removeeColorCategoryBtn = () => {
@@ -23,8 +25,10 @@ export default function Header() {
     setTotal(total) 
     setTotal(totalQuantity)
   }, [cart, total])
-  
 
+  console.log(burger);
+  
+  
   return (
     <header>
       <div className="mb-[15px] p-[15px]">
@@ -37,17 +41,16 @@ export default function Header() {
               alt="logo"
             />
           </Link>
-          <div className="burger" id="menuToggle">
-            <input type="checkbox" />
+          <div onClick={() => dispatch(setBurger(!burger))} className={burger ? 'burger cursor-pointer' : 'burger burger__active cursor-pointer'}>
 
-            <span></span>
-            <span></span>
-            <span></span>
+            <span className={burger ? 'span' : 'span__active'}></span>
+            <span className={burger ? 'span' : 'span__active'}></span>
+            <span className={burger ? 'span' : 'span__active'}></span>
 
-            <ul id="menu">
-              <CategoryBurger />
-            </ul>
           </div>
+          <ul className={burger ? 'menu__list' : 'menu__list list__active'} id="menu">
+              <CategoryBurger />
+          </ul>
           <svg
             className="ml-[185px] hidden md:block"
             xmlns="http://www.w3.org/2000/svg"

@@ -33,7 +33,7 @@ export default {
       'Inter': ['Inter'],
       'Druk-cyr': ['Druk Cyr'],
       'Floripa': ['Floripa'],
-      // 'Gilroy': ['Gilroy'],
+      'Gilroy': ['Gilroy'],
      },
     },
   },

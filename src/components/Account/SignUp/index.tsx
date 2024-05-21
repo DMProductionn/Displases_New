@@ -111,7 +111,7 @@ export default function Index() {
                 </div>
 
                 <hr className='border border-solid border-[#333232] my-[18px]' />
-                <Link to='/profile'>
+                <Link className='text-center' to='/profile'>
                 <input className='cursor-pointer' type='submit' value='JOIN' />
                 </Link>
             </form>

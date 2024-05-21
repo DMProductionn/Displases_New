@@ -5,4 +5,5 @@ export interface ICategory {
   selectCategory: string
   skeleton: boolean,
   product_name: string
+  burger: boolean
 }

@@ -2,11 +2,20 @@ import React from 'react';
 import style from './MainBannerSale.module.css';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { setSelectedProducts } from '../../redux/Slices/products.slice';
 
 
 export default function BannerSale() {
+  const dispatch = useDispatch();
 
-  const dispatch = useDispatch()
+  const obj = {
+    id: 1,
+    name: 'Displases Hoodie SHTRIH in Gray',
+    price: 12000,
+    image: '/img/Clothes/Hoodies/Hoodie-gray-back.webp',
+    imgFront: '/img/Clothes/Hoodies/Hoodie-gray-front.webp',
+    category: 'Худи'
+  }
 
 
   return (
@@ -42,7 +51,7 @@ export default function BannerSale() {
         </div>
         {/* карточка баннера */}
         
-          <div className="absolute right-[20px] top-[20px] w-[160px] rounded-[6px] border-[1px] border-[#333232]">
+          <Link to={`/category/${obj.name}`} onClick={() => dispatch(setSelectedProducts(obj))} className="absolute cursor-pointer right-[20px] top-[20px] w-[160px] rounded-[6px] border-[1px] border-[#333232]">
             <img
               width={160}
               height={140}
@@ -52,11 +61,11 @@ export default function BannerSale() {
             <div className="p-[15px] pt-[6px]">
               <p className="text-[10px]">DISPLASES Hoodie SHTRIH in Gray</p>
               <div className="flex mt-[8px] gap-[5px]">
-                <p className="text-[10px]">12 300р</p>
+                <p className="text-[10px]">12 000р</p>
                 <p className="text-[#717171] line-through text-[10px]">15 500р</p>
               </div>
             </div>
-          </div>
+          </Link>
         <img
           width={350}
           className="absolute right-0 bottom-0 rounded-[12px]"

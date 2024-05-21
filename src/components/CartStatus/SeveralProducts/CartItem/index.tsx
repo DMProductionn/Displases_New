@@ -15,6 +15,10 @@ const CartItem: React.FC<typeCart> =({ name, quantity, total_price, image, size,
       const cartNew = cart.filter((item) => item.selectedProduct.id !== product.selectedProduct.id);
       dispatch(setCart(cartNew));
 }
+
+// @ts-ignore
+const modifiedImagePathFront = image.replace("/public", "");
+
   
 
   return (
@@ -26,7 +30,7 @@ const CartItem: React.FC<typeCart> =({ name, quantity, total_price, image, size,
           <img
             width={100}
             height={90}
-            src={image}
+            src={modifiedImagePathFront}
             alt="hoodie"
           />
         

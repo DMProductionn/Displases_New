@@ -75,7 +75,7 @@ export default function Index() {
                 </div>
 
                 <hr className='border border-solid border-[#333232] my-[18px]' />
-                <Link to='/profile'>
+                <Link className='text-center' to='/profile'>
                 <input type='submit' value='SIGN IN' className={`${style.sign} cursor-pointer`}/>
                 </Link>
             </form>
