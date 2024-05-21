@@ -1,0 +1,6 @@
+@media only screen and (max-width:393px) {
+  .clear_title {
+    width: 100% !important;
+    display: flex;
+  }
+}

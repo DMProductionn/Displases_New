@@ -1,0 +1,93 @@
+.select-container {
+  width: 200px; /* Ширина компонента */
+}
+
+.select__control,
+.select__menu {
+  font-size: 14px; /* Размер шрифта */
+  border: 1px solid #ccc; /* Границы */
+  background-color: #333232;
+  border-radius: 5px; /* Скругленные края */
+  color: #333232;
+}
+
+.select__control {
+  background-color: #333232; /* Фон */
+}
+
+.select__option {
+  padding: 10px; /* Отступы внутри опций */
+}
+
+.select__option--is-selected {
+  background-color: #fff; /* Фон для выбранной опции */
+}
+
+.select__placeholder {
+  color: #333232; /* Цвет текста для плейсхолдера */
+}
+
+.css-13cymwt-control:hover {
+  color: #333232;
+}
+
+.view_wrapper {
+  @apply max-w-[1170px] w-full h-auto m-auto rounded-[6px] py-[12px] px-[20px];
+  background: #1D1D1D;
+  transition: all 1s;
+}
+
+.view_wrapper.active_v {
+  background: #292929;
+  transition: all 1s;
+}
+
+
+.product_active {
+  border-radius: 8px;
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  width: 100%;
+  height: 0px;
+  transition: all .5s;
+}
+
+.product_active.active {
+  height: 100%;
+  background: #232323 !important;
+  z-index: 0;
+}
+
+@media only screen and (max-width:1230px) {
+  .product_active {
+    display: none;
+  }
+
+  .img__wrapper-view {
+    z-index: 0 !important;
+  }
+}
+
+@media only screen and (max-width:801px) {
+  .product__info {
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    margin-top: 60px !important;
+
+  }
+
+  .view_wrapper {
+    display: flex !important;
+  }
+
+  .double_img {
+    display: none !important;
+  }
+
+  .img__wrapper-view {
+    display: flex;
+    justify-content: center;
+  }
+} 

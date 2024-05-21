@@ -1,0 +1,103 @@
+.FilterPopup {
+  position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    list-style: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    max-height: 0;
+    overflow: hidden;
+    @apply border-[#fff] min-w-[150px] absolute left-0 top-[50px] rounded-[6px] bg-gray-main w-full
+}
+
+.price {
+  background-color: #1D1D1D !important;
+    list-style: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.color {
+  background-color: #1D1D1D !important;
+    list-style: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.color.active {
+  background-color: #1D1D1D !important;
+  max-height: 400px;
+}
+
+.price {
+  @apply bg-gray-main
+}
+
+.price.active {
+  background-color: #1D1D1D !important;
+  max-height: 400px;
+}
+
+.FilterPopup.active {
+  max-height: 400px;
+  @apply border-[#fff] border-[1px]
+}
+
+
+.arrow {
+  transform: rotate(-90deg);
+  transition: all 0.2s;
+}
+
+
+.arrowFilterSvg path {
+  fill: #fff;
+  transition: all 0.2s;
+}
+
+.arrowFilterSvg path.active {
+  fill: #111111;
+}
+
+.arrowFilterSvg {
+  @apply ml-[4px]
+}
+
+.arrowFilterSvg.active {
+  transform: rotate(-90deg);
+  transition: all .2s;
+  @apply ml-[4px]
+}
+
+.filterBtn {
+  @apply bg-gray-light h-[40px] uppercase text-[12px] rounded-[6px] flex items-center justify-center w-[150px];
+  transition: all .2s;
+}
+
+.filterBtn.active {
+  background-color: #fff;
+  color: #111;
+}
+
+.activePrice {
+  background-color: #333232;
+}
+
+.activeColor {
+  background-color: #333232;
+}

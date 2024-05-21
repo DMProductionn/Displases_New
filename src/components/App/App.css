@@ -1,0 +1,19 @@
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 14px;
+  background-color: black;
+}
+
+@media only screen and (max-width:780px) {
+  .banners {
+    flex-wrap: wrap;
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+.price {
+  background-color: #1D1D1D !important;
+    list-style: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+    @apply bg-gray-main absolute top-[95px] rounded-[6px] w-full max-w-[145px]
+}
+
+.price.active {
+  background-color: #1D1D1D !important;
+  max-height: 400px;
+  border: 1px solid #fff;
+}
+
+.sizeBtn {
+  @apply bg-gray-light  bg-gray-light h-[40px] uppercase text-[14px] font-[700] rounded-[6px] flex items-center px-[12px] justify-between w-full max-w-[237px]
+}
+
+.sizeBtn.active {
+  @apply bg-[#fff] text-[#111]
+}
+
+.arrowFilterSvg {
+  transform: rotate(-90deg);
+  transition: all .2s ease-in-out;
+}
+
+.arrowFilterSvg.active {
+  transform: rotate(0deg);
+}
+
+.arrowFilterSvg path.active {
+  fill: #111111;
+}

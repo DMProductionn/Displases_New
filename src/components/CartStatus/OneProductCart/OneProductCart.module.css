@@ -1,0 +1,51 @@
+@media only screen and (max-width:1200px) {
+  .hoodieBig {
+      max-width: 100% !important;
+  }
+
+  .hoodieSmallWrapper {
+    flex-direction: row !important;
+    width: 100% !important;
+  }
+
+  .hoodieSmallBlock {
+    width: 100% !important;
+  }
+
+}
+
+
+@media only screen and (max-width:620px) {
+  .hoodieBig {
+      height: auto !important;
+  }
+
+  .hoodieSmallBlock {
+    height: auto !important;
+  }
+
+  .hoodieSmall {
+    height:  auto !important;
+  }
+
+}
+
+@media only screen and (max-width:460px) {
+  .buttons_wrapper {
+    flex-wrap: wrap !important;
+  }
+
+  .hoodieSmallBlock {
+    display: none !important;
+  }
+
+  .wrapper_img {
+    margin-bottom: 15px !important;
+  }
+}
+
+@media only screen and (max-width:393px) {
+  .title {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,39 @@
+@media only screen and (max-width: 784px) {
+    .wrapper {
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .block {
+        width: 100%;
+    }
+    .title {
+        font-size: 16px;
+    }
+    .text {
+        font-size: 14px;
+    }
+    .svg{
+      width: 14px;
+      height: 14px;
+    }
+}
+@media only screen and (min-width: 784px) {
+    .wrapper {
+        justify-content: space-between;
+    }
+    .block {
+        max-width: 45%;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .text {
+        font-size: 16px;
+    }
+    .svg {
+        height: 16px;
+        width: 16px;
+    }
+}

@@ -1,0 +1,10 @@
+.active {
+  @apply text-[#fff] bg-[#333] !important;
+}
+
+
+@media only screen and (min-width:1231px) {
+  .categoryWrapper {
+    display: flex !important;
+  }
+}

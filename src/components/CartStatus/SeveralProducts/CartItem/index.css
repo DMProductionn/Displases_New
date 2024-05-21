@@ -1,0 +1,36 @@
+@media only screen and (max-width: 769px) {
+  .p_one {
+    display: block !important;
+  }
+
+  .p_two {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .q_one {
+    display: block !important;
+  }
+
+  .q_two {
+    display: none !important;
+  }
+
+}
+
+@media only screen and (max-width: 591px) {
+    .btn_delete-one {
+      height: 50px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 !important;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      border-radius: 8px;
+    }
+}
+
