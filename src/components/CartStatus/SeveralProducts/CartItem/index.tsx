@@ -12,9 +12,10 @@ const CartItem: React.FC<typeCart> =({ name, quantity, total_price, image, size,
   // @ts-ignore
   const deleteItem = () => {
     {/* @ts-ignore */}
-      const cartNew = cart.filter((item) => item.selectedProduct.id !== product.selectedProduct.id);
-      dispatch(setCart(cartNew));
+    const cartNew = cart.filter((item) => item.selectedProduct.id !== product.selectedProduct.id || item.selectedSize !== product.selectedSize);
+    dispatch(setCart(cartNew));
 }
+
 
 // @ts-ignore
 const modifiedImagePathFront = image.replace("/public", "");

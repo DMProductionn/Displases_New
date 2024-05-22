@@ -43,7 +43,7 @@ export default function SeveralProducts() {
           cart?.map((product: any) => (
             <CartItem
             product={product}
-            key={product.id} 
+            key={product.selectedProduct.id} 
             name={product.selectedProduct.name}
             image={product.selectedProduct.imgFront}
             quantity={product.total.quantity}

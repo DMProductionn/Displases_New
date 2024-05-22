@@ -18,7 +18,7 @@ const OneProductCart: React.FC = () => {
   // @ts-ignore
   const modifiedImagePathFront = cart?.[0]?.selectedProduct?.imgFront.replace("/public", "");
   // @ts-ignore
-  const modifiedImagePath = cart?.[0].selectedProduct?.image.replace("/public", "");
+  const modifiedImagePath = cart?.[0]?.selectedProduct?.image.replace("/public", "");
 
 
   return (

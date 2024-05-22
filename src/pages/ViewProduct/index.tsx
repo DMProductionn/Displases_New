@@ -14,6 +14,7 @@ export default function ViewProduct() {
   const [active, setActive] = useState(false);
   const { selectedProduct } = useSelector((state: TypeRootStore) => state.Products);
   const [selectedSize, setSelectedSize] = useState('');
+  const [errorSize, setErrorSize] = useState(false);
   const [quantity, _] = useState(1);
   const { cart } = useSelector((state: TypeRootStore) => state.Cart);
 
@@ -27,7 +28,13 @@ export default function ViewProduct() {
   ]
 
  const addToCart = () => {
-  setActive(true);
+
+  if (!selectedSize) {
+    setErrorSize(true)
+  }
+  if (selectedSize) {
+    setActive(true);
+  }
   setFillHeight(100);
 
   const productAdd = {
@@ -43,8 +50,11 @@ export default function ViewProduct() {
   // Проверяем, есть ли уже продукт с таким же id в корзине
   // @ts-ignore 
   const existingProductIndex = cart.findIndex(item => item.selectedProduct.id === selectedProduct.id);
+  // @ts-ignore 
+  const existingProductSize = cart.findIndex(item => item.selectedSize === selectedSize);
+  
 
-  if (existingProductIndex !== -1) {
+  if (existingProductIndex !== -1 && existingProductSize !== -1) {
     // Если продукт уже есть в корзине, увеличиваем его количество
     // @ts-ignore 
     const existingProduct = cart[existingProductIndex];
@@ -72,7 +82,9 @@ export default function ViewProduct() {
     dispatch(setCart(updatedCart));
   } else {
     // Если продукта с таким id нет в корзине, просто добавляем новый продукт
-    dispatch(setCart([...cart, productAdd]));
+    if (selectedSize) {
+      dispatch(setCart([...cart, productAdd]));
+    }
   }
 };
 
@@ -95,7 +107,12 @@ export default function ViewProduct() {
     if (window.innerWidth < 1200) {
       setIsMobile(true)
     }
-  }, [window.innerWidth, isMobile]);
+
+    if (selectedSize) {
+      setErrorSize(false)
+    }
+
+  }, [window.innerWidth, isMobile, selectedSize]);
 
   const modifiedImagePathFront = selectedProduct?.imgFront.replace("/public", "");
   const modifiedImagePath = selectedProduct?.image.replace("/public", "");
@@ -106,7 +123,7 @@ export default function ViewProduct() {
       {
         (
           <div className={isMobile && active ? 'view_wrapper active_v relative' : 'view_wrapper relative'}>
-            <div className={active ? 'product_active active' : 'product_active'}></div>
+            {<div className={active ? 'product_active active' : 'product_active'}></div>}
             {
                
               <>
@@ -138,14 +155,17 @@ export default function ViewProduct() {
                 </div>
               </div>
               <div className="w-full z-[99]">
-                <p className="text-[30px] leading-[125%] mb-[20px]">
+                <p className="text-[30px] leading-[125%] mb-[10px]">
                   DISPLASES <br /> {selectedProduct?.name} 
                 </p>
                 <div className="mt-[8px] gap-[10px] relative">
-                  <div className="flex mb-[20px] gap-[8px]">
+                  <div className="flex mb-[10px] gap-[8px]">
                     <p className="text-[22px] leading-[110%]">{selectedProduct?.price}₽</p>
                   </div>
-                  <div className="flex gap-[20px]">
+                  <div className='mb-[5px] h-[20px]'>
+                    {errorSize && <p className='text-red text-[14px]'>Выберите размер!</p>}
+                  </div>
+                  <div className="flex gap-[20px] btn_view_block">
 
                     <Select
                       options={options}
@@ -157,8 +177,8 @@ export default function ViewProduct() {
                     />
 
                     
-                      <button onClick={addToCart} className="bg-[#F64343] w-full  text-[14px] font-[700] rounded-[6px] flex justify-center items-center">
-                        ADD TO CART
+                      <button onClick={addToCart} className="bg-[#F64343] h-[38px] w-full text-[14px] font-[700] rounded-[6px] flex justify-center items-center view_btn">
+                        ДОБАВИТЬ В КОРЗИНУ
                       </button>
 
                   </div>
