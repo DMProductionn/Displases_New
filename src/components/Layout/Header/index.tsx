@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Header.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { removeColorCategoryBtn, setBurger } from '../../redux/Slices/Category';
 import { useDispatch, useSelector } from 'react-redux';
 import CategoryBurger from '../../Buttons/Category/CategoryBurger';

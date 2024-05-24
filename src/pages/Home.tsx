@@ -10,8 +10,11 @@ export default function Home() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    navigate('/')
-    dispatch(getColorCategoryBtn(-1))
+    if (window.innerWidth < 1200) {
+      dispatch(getColorCategoryBtn(0))
+    } else {
+      dispatch(getColorCategoryBtn(-1))
+    }  
   }, [])
 
 

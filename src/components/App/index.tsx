@@ -23,10 +23,6 @@ import { getColorCategoryBtn } from '../redux/Slices/Category';
 
 function App() {
   const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(getColorCategoryBtn(-1));
-  }, [])
   
 
   const router = createBrowserRouter(
