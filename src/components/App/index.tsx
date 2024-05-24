@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import axios from 'axios';
 import {
   Route,
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider,
+  useNavigate,
 } from 'react-router-dom';
 import './App.css';
 import { useDispatch } from 'react-redux';
@@ -18,9 +18,16 @@ import SignIn from '../Account/SignIn';
 import ViewProduct from '../../pages/ViewProduct';
 import Cart from '../../pages/Cart';
 import Profile from '../../pages/Profile';
+import { getColorCategoryBtn } from '../redux/Slices/Category';
 
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getColorCategoryBtn(-1));
+  }, [])
+  
 
   const router = createBrowserRouter(
     createRoutesFromElements(
